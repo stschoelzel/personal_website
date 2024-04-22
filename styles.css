@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+/* Allgemeine Stile */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-indent: 0;
+    list-style: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05em;
+    color: #334;
+}
+
+/* Farbpalette */
+:root {
+    --color1: #50E8DD;
+    --color2: #90E0F3;
+    --color3: #B8B3E9;
+    --color4: #D999B9;
+    --color5: #D17B88;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--color4) radial-gradient(var(--color5) 50%, var(--color4) 200%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    perspective: 1000px;
+    user-select: none;
+}
+
+div.animation {
+    transform: translateZ(-400px) rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    box-shadow: -4px 8px 8px rgba(8, 0, 32, .06125), -2px 2px 4px rgba(8, 0, 32, .125);
+    transition: all .75s;
+}
+
+div.animation:hover {
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.125), 0px 2px 5px rgba(0, 0, 0, 0.02);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+h1 {
+    font-family: 'Syne', georgia, times, sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--color2);
+    text-shadow: 0px 1px 0px var(--color1);
+    cursor: default;
+}
+
+a {
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    color: var(--color2);
+    background-color: rgba(255, 255, 255, 0.0);
+    transition: all 0.25s ease-out;
+}
+
+a:hover {
+    color: var(--color5);
+    background-color: var(--color2);
+}
+
+li {
+    display: inline;
+
+    font-size: 0.75em;
+}
+
+li:not(:first-child):before {
+    content: "| ";
+    color: var(--color1);
+}
+
+.card {
+    position: relative;
+    width: 22.5em;
+    /* 2.5 mal breiter als vorher */
+    padding: 2.5em 2em;
+    background-color: var(--color5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Inhaltsbereiche */
+#content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.content-section {
+    width: 80%;
+    margin-bottom: 2em;
+    text-align: justify;
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+
+.logo-sts {
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--color2);
+    text-shadow: 0px 1px 0px var(--color1);
+    opacity: 0;
+    animation: fadeIn 1s forwards, slideIn 1s forwards;
+}
+
+/* Inhalt Animation */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* "Logo" Animation */
+
+h1.logo-sts {
+    animation: fadeIn 1s forwards, slideIn 1s forwards;
+    }
+
+span.deleted-text {
+    color: #var(--color2)
+    animation: fadeOutSchölzel 1s forwards 4s, blinkCursor 1s infinite 4s;
+    /* 4s = 1s FadeIn + 1s SlideIn + 2s Verzögerung */
+
+}
+
+span.naftali {
+    font-size: 1em;
+    color: #var(--color2)
+    /* Kleinere Schrift */
+    opacity: 0;
+    /* Anfangs unsichtbar */
+    animation: fadeInNaftali 1s forwards 6s, blinkCursor 1s infinite 6s;
+    /* 6s = 1s FadeIn + 1s SlideIn + 2s Verzögerung + 1s Ausblenden von Schölzel + 1s Verzögerung */
+}
+
+
+
+
+/* Schölzel ausblenden */
+@keyframes fadeOutSchölzel {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Blinkender Cursor */
+@keyframes blinkCursor {
+
+    0%,
+    100% {
+        border-right-color: transparent;
+    }
+
+    50% {
+        border-right-color: black;
+    }
+}
+
+/* naftali einblenden */
+@keyframes fadeInNaftali {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
