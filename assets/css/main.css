@@ -14,6 +14,7 @@ span,
 applet,
 object,
 iframe,
+hr,
 h1,
 h2,
 h3,
@@ -3601,23 +3602,23 @@ body.is-preload #header.alt .logo {
 }
 
 #main ::-webkit-input-placeholder {
-  color: rgba(99, 99, 99, 0.25) !important;
+  color: rgba(99, 99, 99, 0.75) !important;
 }
 
 #main :-moz-placeholder {
-  color: rgba(99, 99, 99, 0.25) !important;
+  color: rgba(99, 99, 99, 0.75) !important;
 }
 
 #main ::-moz-placeholder {
-  color: rgba(99, 99, 99, 0.25) !important;
+  color: rgba(99, 99, 99, 0.75) !important;
 }
 
 #main :-ms-input-placeholder {
-  color: rgba(99, 99, 99, 0.25) !important;
+  color: rgba(99, 99, 99, 0.75) !important;
 }
 
 #main .formerize-placeholder {
-  color: rgba(99, 99, 99, 0.25) !important;
+  color: rgba(99, 99, 99, 0.75) !important;
 }
 
 #main .icon.major {
@@ -3842,25 +3843,5 @@ body.is-preload #header.alt .logo {
 @media screen and (max-width: 480px) {
   #footer {
     padding: 2.5em 1em 0.5em 1em;
-  }
-}
-
-/* Wrapper */
-
-#wrapper {
-  width: 64em;
-  max-width: calc(100% - 4em);
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 480px) {
-  #wrapper {
-    max-width: calc(100% - 2em);
-  }
-}
-
-@media screen and (max-width: 360px) {
-  #wrapper {
-    max-width: 100%;
   }
 }
