@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
 
 /* Allgemeine Stile */
 * {
@@ -9,18 +10,18 @@
     list-style: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-family: 'Syne', sans-serif;
+    font-family:  'Syne', sans-serif;
     font-size: 1.05em;
     color: #334;
 }
 
 /* Farbpalette */
 :root {
-    --color1: #50E8DD;
-    --color2: #90E0F3;
+    --color1: #50e8dd;
+    --color2: #90e0f3;
     --color3: #B8B3E9;
-    --color4: #D999B9;
-    --color5: #D17B88;
+    --color4: #d999b9;
+    --color5: #d17b88;
 }
 
 html,
