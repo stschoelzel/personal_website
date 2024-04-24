@@ -3845,3 +3845,14 @@ body.is-preload #header.alt .logo {
     padding: 2.5em 1em 0.5em 1em;
   }
 }
+
+#logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+#logos img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
