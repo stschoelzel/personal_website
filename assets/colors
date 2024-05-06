@@ -1,0 +1,17 @@
+/* CSS HEX */
+--blush: #d37486ff;
+--ultra-violet: #625296ff;
+--cherry-blossom-pink: #efa8b0ff;
+--lilac: #c79cc8ff;
+--wisteria: #a89cc8ff;
+--powder-blue: #9bb2e1ff;
+--light-sky-blue: #8cc9f0ff;
+
+/* CSS HSL */
+--blush: hsla(349, 52%, 64%, 1);
+--ultra-violet: hsla(254, 29%, 45%, 1);
+--cherry-blossom-pink: hsla(353, 69%, 80%, 1);
+--lilac: hsla(299, 29%, 70%, 1);
+--wisteria: hsla(256, 29%, 70%, 1);
+--powder-blue: hsla(220, 54%, 75%, 1);
+--light-sky-blue: hsla(203, 77%, 75%, 1);
