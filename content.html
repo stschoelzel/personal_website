@@ -53,25 +53,16 @@ if (array_key_exists('to', $_POST)) {
     }
     if (!$err) {
         $mail = new PHPMailer();
-        $mail->isSMTP();
-        $mail->Host = 'localhost';
-        $mail->Port = 25;
-        $mail->CharSet = PHPMailer::CHARSET_UTF8;
-        //It's important not to use the submitter's address as the from address as it's forgery,
-        //which will cause your messages to fail SPF checks.
-        //Use an address in your own domain as the from address, put the submitter's address in a reply-to
-        $mail->setFrom('contact@example.com', (empty($name) ? 'Contact form' : $name));
-        $mail->addAddress($to);
-        $mail->addReplyTo($email, $name);
-        $mail->Subject = 'Contact form: ' . $subject;
-        $mail->Body = "Contact form submission\n\n" . $query;
-        if (!$mail->send()) {
-            $msg .= 'Mailer Error: ' . $mail->ErrorInfo;
-        } else {
-            $msg .= 'Message sent!';
-        }
-    }
-} ?>
+        $mail->isSMTP(); $mail->Host = 'localhost'; $mail->Port = 25;
+$mail->CharSet = PHPMailer::CHARSET_UTF8; //It's important not to use the
+submitter's address as the from address as it's forgery, //which will cause your
+messages to fail SPF checks. //Use an address in your own domain as the from
+address, put the submitter's address in a reply-to
+$mail->setFrom('contact@example.com', (empty($name) ? 'Contact form' : $name));
+$mail->addAddress($to); $mail->addReplyTo($email, $name); $mail->Subject =
+'Contact form: ' . $subject; $mail->Body = "Contact form submission\n\n" .
+$query; if (!$mail->send()) { $msg .= 'Mailer Error: ' . $mail->ErrorInfo; }
+else { $msg .= 'Message sent!'; } } } ?>
 <!DOCTYPE html>
 
 <html>
@@ -277,13 +268,13 @@ if (array_key_exists('to', $_POST)) {
             Fragen haben oder bereits eine konkrete Idee verfolgen!
           </p>
           <!-- Form -->
-		<?php if (empty($msg)) { ?>
+          <?php if (empty($msg)) { ?>
           <form method="post" action="#">
             <div class="row gtr-uniform">
               <div class="col-6 col-12-xsmall">
                 <input
                   type="text"
-                  name="demo-name"
+                  name="name"
                   id="demo-name"
                   value=""
                   placeholder="Name"
@@ -292,29 +283,15 @@ if (array_key_exists('to', $_POST)) {
               <div class="col-6 col-12-xsmall">
                 <input
                   type="email"
-                  name="demo-email"
+                  name="email"
                   id="demo-email"
                   value=""
                   placeholder="Email"
                 />
               </div>
-
-              <div class="col-6 col-12-small">
-                <input type="checkbox" id="demo-copy" name="demo-copy" />
-                <label for="demo-copy">Eine Kopie der Mail an mich</label>
-              </div>
-              <div class="col-6 col-12-small">
-                <input
-                  type="checkbox"
-                  id="demo-human"
-                  name="demo-human"
-                  checked
-                />
-                <label for="demo-human">Ich bin kein Roboter.</label>
-              </div>
               <div class="col-12">
                 <textarea
-                  name="demo-message"
+                  name="query"
                   id="demo-message"
                   placeholder="Meine Nachricht..."
                   rows="6"
@@ -330,7 +307,10 @@ if (array_key_exists('to', $_POST)) {
               </div>
             </div>
           </form>
-<?php } else {
+          <?php } else {
+              echo $msg;
+          } ?>
+          <?php } else {
     echo $msg;
 } ?>
           <!-- Form Script 
