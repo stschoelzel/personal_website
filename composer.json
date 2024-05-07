@@ -1,0 +1,11 @@
+{
+  "config": {
+    "allow-plugins": {
+      "plesk/composer-command-info": true
+    }
+  },
+  "require": {
+    "plesk/composer-command-info": "~1.1.0",
+    "phpmailer/phpmailer": "^6.9.1"
+  }
+}
