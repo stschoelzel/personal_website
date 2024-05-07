@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 /**
  * PHPMailer simple contact form example.
@@ -63,6 +63,7 @@ $mail->addAddress($to); $mail->addReplyTo($email, $name); $mail->Subject =
 'Contact form: ' . $subject; $mail->Body = "Contact form submission\n\n" .
 $query; if (!$mail->send()) { $msg .= 'Mailer Error: ' . $mail->ErrorInfo; }
 else { $msg .= 'Message sent!'; } } } ?>
+-->
 <!DOCTYPE html>
 
 <html>
@@ -275,7 +276,7 @@ else { $msg .= 'Message sent!'; } } } ?>
                 <input
                   type="text"
                   name="name"
-                  id="demo-name"
+                  id="name"
                   value=""
                   placeholder="Name"
                 />
@@ -284,7 +285,7 @@ else { $msg .= 'Message sent!'; } } } ?>
                 <input
                   type="email"
                   name="email"
-                  id="demo-email"
+                  id="email"
                   value=""
                   placeholder="Email"
                 />
@@ -292,7 +293,7 @@ else { $msg .= 'Message sent!'; } } } ?>
               <div class="col-12">
                 <textarea
                   name="query"
-                  id="demo-message"
+                  id="query"
                   placeholder="Meine Nachricht..."
                   rows="6"
                 ></textarea>
@@ -310,10 +311,8 @@ else { $msg .= 'Message sent!'; } } } ?>
           <?php } else {
               echo $msg;
           } ?>
-          <?php } else {
-    echo $msg;
-} ?>
-          <!-- Form Script 
+
+          <!-- Form Script -->
           <script>
             // Funktion, die aufgerufen wird, wenn das Textarea-Element angeklickt wird
             function handleTextareaClick() {
@@ -323,7 +322,7 @@ else { $msg .= 'Message sent!'; } } } ?>
             }
             document.getElementById("demo-message").onclick =
               handleTextareaClick;
-          </script> -->
+          </script>
         </section>
       </div>
 
