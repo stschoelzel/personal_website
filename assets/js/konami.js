@@ -1,14 +1,14 @@
-// a key map of allowed keys
+// Zuordnung von Tastencode zu Tastenbezeichnung
 var allowedKeys = {
-  37: "left",
-  38: "up",
-  39: "right",
-  40: "down",
-  65: "a",
-  66: "b",
+  37: "left", // Pfeiltaste links
+  38: "up", // Pfeiltaste hoch
+  39: "right", // Pfeiltaste rechts
+  40: "down", // Pfeiltaste runter
+  65: "a", // Taste A
+  66: "b", // Taste B
 };
 
-// the 'official' Konami Code sequence
+// Konami-Code-Sequenz
 var konamiCode = [
   "up",
   "up",
@@ -21,45 +21,62 @@ var konamiCode = [
   "b",
   "a",
 ];
+var konamiCodePosition = 0; // Position im Konami-Code
 
-// a variable to remember the 'position' the user has reached so far.
-var konamiCodePosition = 0;
+// Sexting-Code-Sequenz
+var sextingCode = ["up", "up", "up", "a", "a"];
+var sextingCodePosition = 0; // Position im Sexting-Code
 
-// add keydown event listener
+// Event-Listener für Tastendruck (gemeinsam für beide Codes)
 document.addEventListener("keydown", function (e) {
-  // get the value of the key code from the key map
+  // Ermitteln der gedrückten Taste aus der Zuordnung
   var key = allowedKeys[e.keyCode];
-  // get the value of the required key from the konami code
-  var requiredKey = konamiCode[konamiCodePosition];
 
-  // compare the key with the required key
-  if (key == requiredKey) {
-    // move to the next key in the konami code sequence
-    konamiCodePosition++;
-
-    // if the last key is reached, activate cheats
+  // Prüfen auf Konami-Code
+  var konamiRequiredKey = konamiCode[konamiCodePosition];
+  if (key == konamiRequiredKey) {
+    konamiCodePosition++; // Nächste Position im Konami-Code
     if (konamiCodePosition == konamiCode.length) {
-      activateCheats();
-      konamiCodePosition = 0;
+      // Konami-Code vollständig
+      activateKonamiCheats();
+      konamiCodePosition = 0; // Zurücksetzen für erneute Eingabe
     }
   } else {
-    konamiCodePosition = 0;
+    konamiCodePosition = 0; // Zurücksetzen bei falscher Taste
+  }
+
+  // Prüfen auf Sexting-Code
+  var sextingRequiredKey = sextingCode[sextingCodePosition];
+  if (key == sextingRequiredKey) {
+    sextingCodePosition++; // Nächste Position im Sexting-Code
+    if (sextingCodePosition == sextingCode.length) {
+      // Sexting-Code vollständig
+      activateSextingCheats();
+      sextingCodePosition = 0; // Zurücksetzen für erneute Eingabe
+    }
+  } else {
+    sextingCodePosition = 0; // Zurücksetzen bei falscher Taste
   }
 });
 
-function activateCheats() {
-  document.body.style.backgroundImage = "url('images/konami.jpg')";
-  document.body.style.backgroundImage = "url('images/konami.jpg')";
-  document.body.style.backgroundSize = "100%";
-  document.body.style.zIndex = "-1";
-  document.body.style.backgroundPosition = "center";
-  document.body.style.backgroundColor = "black";
-  document.body.style.backgroundRepeat = "no-repeat";
-
-  var audio = new Audio("assets/audio/konami.mp3");
+// Funktion zur Aktivierung der Konami-Cheats
+function activateKonamiCheats() {
+  document.body.style.backgroundImage = "url('images/konami.jpg')"; // Hintergrundbild setzen
+  document.body.style.backgroundSize = "cover"; // Bild skalieren, um den gesamten Hintergrund abzudecken
+  document.body.style.color = "white"; // Textfarbe auf Weiß ändern
+  document.body.style.fontFamily = "monospace"; // Schriftart ändern
+  document
+    .querySelectorAll("*")
+    .forEach((el) => (el.style.textShadow = "0 0 5px red")); // Text-Schatten hinzufügen
+  var audio = new Audio("assets/audio/konami.mp3"); // Sound abspielen
   audio.play();
-
-  alert("cheats activated");
+  alert("Konami-Cheats aktiviert");
 }
 
-//credits https://stackoverflow.com/questions/31626852/how-to-add-konami-code-in-a-website-based-on-html/31627191#31627191
+// Funktion zur Aktivierung der Sexting-Cheats
+function activateSextingCheats() {
+  var audio = new Audio("assets/audio/konami.mp3"); // Sound abspielen (optional anderer Sound)
+  audio.play();
+  alert("Sexting-Cheats aktiviert");
+  window.open("assets/downloads/sexting1x1zine.pdf", "_blank");
+}
