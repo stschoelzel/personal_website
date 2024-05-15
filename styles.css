@@ -206,3 +206,19 @@ span.naftali {
         opacity: 1;
     }
 }
+
+
+
+/* iFrame Index */
+#iframe-container {
+    width: 900px;
+    height: 600px;
+  }
+  
+  /* Anpassung für kleinere Bildschirme */
+  @media (max-width: 768px) {
+    #iframe-container {
+      width: 100%; /* Volle Breite */
+      height: auto; /* Höhe automatisch anpassen */
+    }
+  }

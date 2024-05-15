@@ -73,10 +73,14 @@ function activateKonamiCheats() {
   alert("Konami-Cheats aktiviert");
 }
 
+var iframe = document.getElementById("iframe-container");
+
 // Funktion zur Aktivierung der Sexting-Cheats
 function activateSextingCheats() {
   var audio = new Audio("assets/audio/konami.mp3"); // Sound abspielen (optional anderer Sound)
   audio.play();
   alert("Sexting-Cheats aktiviert");
-  window.open("assets/downloads/sexting1x1zine.pdf", "_blank");
+  var iframe = document.getElementById("iframe-container");
+  iframe.src = "assets/downloads/sexting1x1zine_mitanleitung.pdf"; // sexting
+  iframe.style.display = "block";
 }
