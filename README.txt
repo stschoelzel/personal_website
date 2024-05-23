@@ -1,23 +1,14 @@
+
 # Personal Website - stschoelzel.de
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 Meine persönliche Webseite, auf der ich mich und meine Arbeit vorstelle. Das Design basiert auf dem Stellar-Template von HTML5 UP.
 
-## 🚀 Live Demo
+## 🚀 Live "Demo"
 
-Besuche meine Website unter: https://www.stschoelzel.de
+URL der Website: https://www.stschoelzel.de
 
-## 📷 Screenshots (optional)
-
-Hier kannst Du ein paar Screenshots Deiner Webseite einfügen, um einen visuellen Eindruck zu vermitteln.
-
-## ✨ Features
-
-* **Modernes Design:** Ein ansprechendes, minimalistisches Design basierend auf Stellar.
-* **Responsive Layout:** Passt sich an verschiedene Bildschirmgrößen an (Desktop, Tablet, Smartphone).
-* **Einfache Navigation:** Klare Menüstruktur für eine intuitive Benutzererfahrung.
-* **... (weitere Features Deiner Webseite, z.B. Kontaktformular, Blog, Portfolio)**
 
 ## 🛠️ Technologien
 
@@ -40,8 +31,9 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die [LICENSE](LICENSE)
 
 ## 🤝 Contributing (optional)
 
-Wenn Du Fehler findest oder Verbesserungen vorschlagen möchtest, erstelle gerne ein Issue oder einen Pull Request.
+Wenn Du Fehler findest oder Verbesserungen vorschlagen möchtest, hau raus im Spirit der Cooperation und so...
 
-## 📬 Kontakt
+## 📝ToDo
 
-Du kannst mich über das Kontaktformular auf meiner Webseite erreichen oder mir eine E-Mail an [deine@email.de] senden.
+* **Kontaktformular funktionell machen:** 
+* **ggf mal style und js datein sauber machen fur index und content:** 
