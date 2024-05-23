@@ -1,31 +1,47 @@
-Stellar by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Personal Website - stschoelzel.de
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-Say hello to Stellar, a slick little one-pager with a super vibrant color palette (which
-I guess you can always tone down if it's a little too vibrant for you), a "sticky" in-page
-nav bar (powered by my Scrollex plugin), a separate generic page template (just in case
-you need one), and an assortment of pre-styled elements.
+Meine persönliche Webseite, auf der ich mich und meine Arbeit vorstelle. Das Design basiert auf dem Stellar-Template von HTML5 UP.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## 🚀 Live Demo
 
-(* = not included)
+Besuche meine Website unter: https://www.stschoelzel.de
 
-AJ
-aj@lkn.io | @ajlkn
+## 📷 Screenshots (optional)
 
+Hier kannst Du ein paar Screenshots Deiner Webseite einfügen, um einen visuellen Eindruck zu vermitteln.
 
-Credits:
+## ✨ Features
 
-	Demo Images:
-		Unsplash (unsplash.com)
+* **Modernes Design:** Ein ansprechendes, minimalistisches Design basierend auf Stellar.
+* **Responsive Layout:** Passt sich an verschiedene Bildschirmgrößen an (Desktop, Tablet, Smartphone).
+* **Einfache Navigation:** Klare Menüstruktur für eine intuitive Benutzererfahrung.
+* **... (weitere Features Deiner Webseite, z.B. Kontaktformular, Blog, Portfolio)**
 
-	Icons:
-		Font Awesome (fontawesome.io)
+## 🛠️ Technologien
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+* **HTML5:** Markup-Sprache für die Struktur der Webseite.
+* **CSS3:** Stylesheet-Sprache für das Aussehen der Webseite.
+* **JavaScript:** Programmiersprache für interaktive Elemente und Animationen.
+* **jQuery:** JavaScript-Bibliothek für vereinfachte DOM-Manipulation und Event-Handling.
+* **Scrollex:** jQuery-Plugin für scrollbasierte Effekte.
+* **Responsive Tools:** jQuery-Plugin für responsive Webdesign.
+* **Font Awesome:** Icon-Bibliothek für skalierbare Vektor-Icons.
+
+## 📚 Credits
+
+* **Template:** Stellar by HTML5 UP ([html5up.net](https://html5up.net/))
+* **Bilder:** Unsplash ([unsplash.com](https://unsplash.com/))
+
+## 📄 Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die [LICENSE](LICENSE) Datei für weitere Details.
+
+## 🤝 Contributing (optional)
+
+Wenn Du Fehler findest oder Verbesserungen vorschlagen möchtest, erstelle gerne ein Issue oder einen Pull Request.
+
+## 📬 Kontakt
+
+Du kannst mich über das Kontaktformular auf meiner Webseite erreichen oder mir eine E-Mail an [deine@email.de] senden.
